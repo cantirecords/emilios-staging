@@ -121,7 +121,7 @@ input[type=color]{-webkit-appearance:none;width:44px;height:36px;border:none;bor
 <div id="login">
   <div class="login-card">
     <img class="login-logo" src="https://emiliosgrocery.com/wp-content/uploads/2025/04/Emilios-Grocery-Logo.png" alt="Logo">
-    <div class="login-h">Editor de Menu</div>
+    <div style="background:#ff8c00;color:#fff;border-radius:10px;padding:8px 16px;font-size:13px;font-weight:700;margin-bottom:12px;letter-spacing:1px;">AMBIENTE DE PRUEBAS</div><div class="login-h">Editor de Menu</div>
     <div class="login-sub">Ingresa tu PIN</div>
     <div class="dots"><div class="dot" id="d0"></div><div class="dot" id="d1"></div><div class="dot" id="d2"></div><div class="dot" id="d3"></div></div>
     <div class="pad">
@@ -138,7 +138,7 @@ input[type=color]{-webkit-appearance:none;width:44px;height:36px;border:none;bor
   <div class="topbar">
     <div class="topbar-left">
       <img class="topbar-logo" src="https://emiliosgrocery.com/wp-content/uploads/2025/04/Emilios-Grocery-Logo.png" alt="">
-      <div><div class="topbar-title">Editor de Menu</div><div class="topbar-sub">Emilio's Grocery</div></div>
+      <div><div class="topbar-title">Editor de Menu</div><div class="topbar-sub" style="color:#ff8c00;font-weight:700;">STAGING — PRUEBAS</div></div>
     </div>
     <div class="topbar-right">
       <div class="role-pill" id="role-pill"></div>
@@ -173,9 +173,9 @@ input[type=color]{-webkit-appearance:none;width:44px;height:36px;border:none;bor
       <div class="url-config-box">
         <h4>URLs de GitHub Pages</h4>
         <p>Pon las URLs exactas de tus pantallas una sola vez.</p>
-        <input type="url" id="cfg-p1-url" placeholder="https://...github.io/.../pantalla1.html" oninput="saveURLs()">
-        <input type="url" id="cfg-p2-url" placeholder="https://...github.io/.../pantalla2.html" oninput="saveURLs()">
-        <input type="url" id="cfg-p3-url" placeholder="https://...github.io/.../pantalla3.html" oninput="saveURLs()">
+        <input type="url" id="cfg-p1-url" placeholder="https://cantirecords.github.io/emilios-staging/pantalla1.html" oninput="saveURLs()">
+        <input type="url" id="cfg-p2-url" placeholder="https://cantirecords.github.io/emilios-staging/pantalla2.html" oninput="saveURLs()">
+        <input type="url" id="cfg-p3-url" placeholder="https://cantirecords.github.io/emilios-staging/pantalla3.html" oninput="saveURLs()">
       </div>
       <button class="preview-toggle-btn" onclick="togglePreview('p1')">Ver Pantalla 1 en vivo</button>
       <div class="preview-wrap" id="preview-p1"><div class="preview-label">PANTALLA 1</div><div class="preview-iframe-wrap"><iframe id="iframe-p1" src="" loading="lazy"></iframe></div><div class="preview-notice">Los sliders se actualizan al instante.</div></div>
@@ -336,9 +336,9 @@ input[type=color]{-webkit-appearance:none;width:44px;height:36px;border:none;bor
 
 <script>
 // ============================================================
-const OWNER_PIN  = "5678";   // Dueno — acceso total
+const OWNER_PIN  = "5678";   // Dueno — acceso total (STAGING)
 const CLIENT_PIN = "1234";   // Cliente — solo precio + sub
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwO2rLqhIb9Wodhc17eSgjY6m6-b_Tphwbsbjziu3YiuP0csxtPl14PzKKiy_JW_wNssw/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzALLWnYC4GVS23_Zg45GNbKB8F3Ru1iFgKXN-3i8BzKyW0RrVn6Ea-qYVkdIfeYw3N/exec";
 // ============================================================
 
 let role=null,cache=null,cur='';
