@@ -16,15 +16,15 @@
         .t-es{font-size:32px;font-weight:600;color:var(--yellow);letter-spacing:3px;margin-top:5px;}
         .logo-icon{height:120px;filter:drop-shadow(0 6px 12px rgba(0,0,0,0.3));}
         .body{flex:1;display:flex;gap:25px;min-height:0;margin-top:10px;}
-        .items-grid{flex:1;display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:repeat(3,1fr);gap:18px;}
-        .card{position:relative;background:var(--white);border-radius:var(--card-radius);box-shadow:0 12px 35px rgba(0,0,0,0.25);display:flex;flex-direction:row;align-items:center;padding:8px 16px;overflow:visible;}
-        .card-img-wrap{flex-shrink:0;width:160px;height:130px;display:flex;align-items:center;justify-content:center;position:relative;z-index:10;margin-left:-15px;}
-        .card-img{object-fit:contain;filter:drop-shadow(0 10px 15px rgba(0,0,0,0.4));animation:floatCard 10s ease-in-out infinite;width:220px;}
-        @keyframes floatCard{0%,100%{transform:translate(var(--tx,0px),var(--ty,0px)) rotate(0deg);}50%{transform:translate(var(--tx,0px),calc(var(--ty,0px) - 8px)) rotate(2deg);}}
-        .card-text{flex:1;display:flex;flex-direction:column;justify-content:center;padding-left:10px;gap:2px;}
-        .c-name{font-size:34px;font-weight:700;color:var(--red);line-height:1;}
-        .c-sub{font-size:19px;font-weight:500;color:var(--grey);line-height:1.2;min-height:22px;}
-        .c-price{font-size:40px;font-weight:700;color:var(--green);line-height:1;}
+        .items-grid{flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(5,1fr);gap:12px;}
+        .card{position:relative;background:var(--white);border-radius:var(--card-radius);box-shadow:0 8px 24px rgba(0,0,0,0.22);display:flex;flex-direction:row;align-items:center;padding:6px 18px 6px 0;overflow:visible;}
+        .card-img-wrap{flex-shrink:0;width:140px;height:110px;display:flex;align-items:center;justify-content:center;position:relative;z-index:10;}
+        .card-img{object-fit:contain;filter:drop-shadow(0 8px 12px rgba(0,0,0,0.38));animation:floatCard 10s ease-in-out infinite;width:190px;}
+        @keyframes floatCard{0%,100%{transform:translate(var(--tx,0px),var(--ty,0px)) rotate(0deg);}50%{transform:translate(var(--tx,0px),calc(var(--ty,0px) - 6px)) rotate(1.5deg);}}
+        .card-text{flex:1;display:flex;flex-direction:column;justify-content:center;padding-left:8px;gap:1px;}
+        .c-name{font-size:30px;font-weight:700;color:var(--red);line-height:1.05;}
+        .c-sub{font-size:17px;font-weight:500;color:var(--grey);line-height:1.2;min-height:18px;}
+        .c-price{font-size:36px;font-weight:700;color:var(--green);line-height:1;}
         .fajita-col{width:380px;flex-shrink:0;display:flex;flex-direction:column;position:relative;margin-top:80px;}
         .fajita-card{background:var(--white);border-radius:var(--card-radius);box-shadow:0 15px 40px rgba(0,0,0,0.3);flex:1;display:flex;flex-direction:column;padding:20px 30px;overflow:visible;}
         .fajita-img-wrap{position:absolute;top:var(--faj-top,-110px);left:calc(50% + var(--faj-tx,0px));transform:translateX(-50%);z-index:20;}
@@ -70,8 +70,8 @@
 </div>
 <script>
 const APPS_SCRIPT_URL="https://script.google.com/macros/s/AKfycbzALLWnYC4GVS23_Zg45GNbKB8F3Ru1iFgKXN-3i8BzKyW0RrVn6Ea-qYVkdIfeYw3N/exec";
-const FALLBACK_IMGS=["https://i.postimg.cc/vBvnSbS0/CHILAQUILES.png","https://i.postimg.cc/1tMgrM8Z/TORTA-CUBANO.png","https://i.postimg.cc/8cK6NwGw/GORDITAS.png","https://i.postimg.cc/KjqMxQbH/MOLCAJETE.png","https://i.postimg.cc/pXrjqNQB/PECHUGA-A-LA-PLANCHA.png","https://i.postimg.cc/fLsXKJ5p/CARNE-ASADA-A-LA-PLANCHA.png","https://i.postimg.cc/pdbnWmN2/QUESABIRRIA-TACOS.png","https://i.postimg.cc/G2jDSdSg/ENCHILADAS-VERDES.png","https://i.postimg.cc/T1YDzFzy/FLAUTA-DE-POLLO.png"];
-const DEF_P2=FALLBACK_IMGS.map(()=>({width:220,tx:0,ty:0}));
+const FALLBACK_IMGS=["https://i.postimg.cc/vBvnSbS0/CHILAQUILES.png","https://i.postimg.cc/1tMgrM8Z/TORTA-CUBANO.png","https://i.postimg.cc/8cK6NwGw/GORDITAS.png","https://i.postimg.cc/KjqMxQbH/MOLCAJETE.png","https://i.postimg.cc/pXrjqNQB/PECHUGA-A-LA-PLANCHA.png","https://i.postimg.cc/fLsXKJ5p/CARNE-ASADA-A-LA-PLANCHA.png","https://i.postimg.cc/pdbnWmN2/QUESABIRRIA-TACOS.png","https://i.postimg.cc/G2jDSdSg/ENCHILADAS-VERDES.png","https://i.postimg.cc/T1YDzFzy/FLAUTA-DE-POLLO.png","https://i.postimg.cc/8PqX8QpT/CHICHARRON.png"];
+const DEF_P2=FALLBACK_IMGS.map(()=>({width:190,tx:0,ty:0}));
 const DEF_FAJ={width:450,tx:0,top:-110};
 let imgCfgP2=JSON.parse(localStorage.getItem('imgCfgP2')||'null')||DEF_P2.map(c=>({...c}));
 let imgCfgFaj=JSON.parse(localStorage.getItem('imgCfgFaj')||'null')||{...DEF_FAJ};
@@ -105,7 +105,7 @@ function applyFajCfg(cfg){
 
 function buildGrid(espec){
     const g=document.getElementById('items-grid');g.innerHTML='';
-    espec.slice(0,9).forEach((item,i)=>{
+    espec.slice(0,10).forEach((item,i)=>{
         const img=item.img||FALLBACK_IMGS[i]||'';
         const cfg=imgCfgP2[i]||DEF_P2[0];
         const card=document.createElement('div');card.className='card';card.id='card-p2-'+i;
@@ -125,7 +125,7 @@ function buildFajitas(fajitas){
 }
 
 function updateInPlace(espec,fajitas){
-    espec.slice(0,9).forEach((item,i)=>{
+    espec.slice(0,10).forEach((item,i)=>{
         const img=item.img||FALLBACK_IMGS[i]||'';
         const elImg=document.getElementById('cimg-p2-'+i),elN=document.getElementById('cname-p2-'+i),elS=document.getElementById('csub-p2-'+i),elP=document.getElementById('cprice-p2-'+i);
         if(elImg&&elImg.getAttribute('src')!==img){elImg.src=img;elImg.style.opacity='1';}
