@@ -22,8 +22,8 @@
         .card-img{object-fit:contain;filter:drop-shadow(0 8px 12px rgba(0,0,0,0.38));animation:floatCard 10s ease-in-out infinite;width:190px;}
         @keyframes floatCard{0%,100%{transform:translate(var(--tx,0px),var(--ty,0px)) rotate(0deg);}50%{transform:translate(var(--tx,0px),calc(var(--ty,0px) - 6px)) rotate(1.5deg);}}
         .card-text{flex:1;display:flex;flex-direction:column;justify-content:center;padding-left:8px;gap:1px;}
-        .c-name{font-size:30px;font-weight:700;color:var(--red);line-height:1.05;}
-        .c-sub{font-size:17px;font-weight:500;color:var(--grey);line-height:1.2;min-height:18px;}
+        .c-name{font-size:47px;font-weight:700;color:var(--red);line-height:1.05;}
+        .c-sub{font-size:30px;font-weight:500;color:var(--grey);line-height:1.2;min-height:18px;}
         .c-price{font-size:36px;font-weight:700;color:var(--green);line-height:1;}
         .fajita-col{width:380px;flex-shrink:0;display:flex;flex-direction:column;position:relative;margin-top:80px;}
         .fajita-card{background:var(--white);border-radius:var(--card-radius);box-shadow:0 15px 40px rgba(0,0,0,0.3);flex:1;display:flex;flex-direction:column;padding:20px 30px;overflow:visible;}
@@ -31,12 +31,12 @@
         .fajita-img{display:block;filter:drop-shadow(0 15px 20px rgba(0,0,0,0.5));animation:floatFaj 12s ease-in-out infinite;width:var(--faj-w,450px);}
         @keyframes floatFaj{0%,100%{transform:translateY(0);}50%{transform:translateY(-15px);}}
         .fajita-content{padding-top:var(--faj-pt,60px);display:flex;flex-direction:column;flex:1;}
-        .fajita-title{font-size:58px;font-weight:700;color:var(--red);text-align:center;margin-bottom:8px;}
+        .fajita-title{font-size:80px;font-weight:700;color:var(--red);text-align:center;margin-bottom:8px;}
         .f-table{display:flex;flex-direction:column;flex:1;justify-content:space-evenly;}
         .f-row{display:flex;justify-content:space-between;align-items:center;border-bottom:2px dashed rgba(0,0,0,0.1);padding:10px 0;}
         .f-row:last-child{border-bottom:none;}
-        .f-name{font-size:24px;font-weight:700;color:var(--grey);}
-        .f-price{font-size:36px;font-weight:700;color:var(--green);}
+        .f-name{font-size:30px;font-weight:700;color:var(--grey);}
+        .f-price{font-size:40px;font-weight:700;color:var(--green);}
         .price-note{font-size:16px;color:rgba(255,255,255,0.6);text-align:right;margin-top:15px;font-style:italic;}
         #toast{position:fixed;bottom:25px;right:25px;background:var(--green);color:var(--white);font-size:18px;font-weight:700;padding:12px 25px;border-radius:50px;box-shadow:0 10px 30px rgba(0,0,0,0.4);opacity:0;transform:translateY(15px);transition:all .5s;z-index:9999;}
         #toast.show{opacity:1;transform:translateY(0);}
